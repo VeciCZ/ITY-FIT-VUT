@@ -1,4 +1,4 @@
-# ITY-FIT-VUT
+# [ITY] Typography and Publishing - FIT BUT
 Project for Typography and Publishing course at FIT BUT. (LaTeX)
 
 1.  Introduction to LaTeX (9.8/10)
