@@ -1,0 +1,57 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm,top=3cm,text={17cm, 24cm}]{geometry}
+\usepackage{times}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\textsc{{\Huge Vysoké učení technické v Brně}\\[0.7em]
+{\huge Fakulta informačních technologií}}\\
+{\LARGE
+\vspace{\stretch{0.382}}
+Typografie a publikování\,--\,4. projekt}\\[0.4em]
+{\Huge Bibliografické citace}\\
+\vspace{\stretch{0.618}}
+\end{center}
+{\Large \today \hfill
+Dominik Večeřa}
+\end{titlepage}
+
+\section{Co je to \LaTeX?}
+
+\LaTeX~je nadstavbou programu \TeX, obsahující balík maker umožňující tvůrcům textů sázet a tisknout svá díla ve velmi vysoké typografické kvalitě, za použití předem předdefinovaných vzhledů dokumentu. Více viz \cite{OnlineWiki}.
+
+\section{Krátce z historie \LaTeX u}
+
+\TeX~jako takový vznikl koncem 70. let jako důsledek nespokojenosti Donalda E. Knutha se současným stavem sazby matematických textů (podrobněji na \cite{OnlineTeXHistory}). \TeX~samotný je však pro spoustu lidí velmi složitý. \LaTeX~byl vytvořen Leslie Lamportem v první polovině 80. století za účelem zpřístupnění možností \TeX u širší veřejnosti. Současná verze, \LaTeX 2e, pochází z roku 1994. Dále viz \cite{OnlineGanguli}.
+
+\section{Struktura dokumentu v \LaTeX u}
+
+\subsection{Začátek a konec dokumentu}
+Každý dokument musí začínat tímto příkazem: \verb|\documentclass{parametr}|. Parametr určuje typ dokumentu, jako například \verb|article| (článek) či \verb|book| (kniha). Začátek samotného dokumentu určuje příkaz \verb|\begin{document}|. Dokument je třeba ukončit příkazem \verb|\end{document}|.
+
+\subsection{Obsah dokumentu}
+Jednotlivé části (sekce) dokumentu se označují příkazem \verb|\section|. Pro vysázení podsekce lze použít příkaz \verb|\subsection|, případně i další úroveň \verb|\subsubsection|. \LaTeX~se sám postará o číslování. Některé další příklady viz např. \cite{BookCookbook}.
+
+\section{Některé z možností \LaTeX u}
+
+Do \LaTeX ového dokumentu lze například vkládat grafické soubory vytvořené jinými programy pomocí příkazu \verb|\includegraphics{soubor}|, kde \verb|soubor| představuje relativní cestu k danému souboru. Viz také \cite{ThesisBunka}.
+
+Dále můžeme vytvářet tabulky s využitím prostředí \verb|tabular| či využít prostředí \verb|tabbing| pro pořadovou sazbu. O tvoření víceřádkových či vícesloupcových buněk tabulek pomocí příkazů \verb|multirow| a \verb|multicol| pojednává například \cite{ArticleTUGboat}. Rozšířenější popis problematiky lze nalézt v \cite{BookZac}.
+
+Pomocí \LaTeX u také můžeme sázet skvěle vypadající matematické vzorce. Příklad (vzorec převzat z \cite{ArticleMath}):
+$$ \frac{dP}{dR} = \rho \frac{V^2}{R} $$
+
+\section{Citace v \LaTeX u}
+
+Citování se v \LaTeX u nejlépe provádí pomocí nástroje \textsc{Bib}\TeX, který automaticky vygeneruje seznam citovaných zdrojů na základě jejich databáze v souboru s příponou \verb|.bib|. Příklad záznamu v tomto souboru např. na \cite{ThesisMazac}. České citace se řídí primárně normou ČSN ISO 690. Podrobnější popis této normy lze nalézt v \cite{ArticleCSTUG}.
+
+\newpage
+\bibliographystyle{czechiso}
+\renewcommand{\refname}{Literatura}
+\bibliography{proj4}
+
+\end{document}
